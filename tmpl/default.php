@@ -12,8 +12,7 @@ defined('_JEXEC') or die;
 
     <?php
     if (!empty($dataContact)) {//if returned contact data is not empty
-
-         //check each show/hide entry
+        //check each show/hide entry
         if ($name_hyperlink == "1") {
             $url = "index.php?option=com_contact&view=contact&id=" . $dataContact->id;
             ?>
@@ -48,7 +47,12 @@ defined('_JEXEC') or die;
             <?php
         }
         if ($email_attribute == "1") {
-            echo JHtml::_('email.cloak', $dataContact->email_to, 1, 'Email', 0);
+            echo JHtml::_('email.cloak', $dataContact->email_to, 1, JText::_('Email'), 0);
+            ?><br>
+            <?php
+        }
+        if ($email_visible_outside == "1") {
+            echo JHtml::_('email.cloak', $dataContact->email_to);
             ?><br>
             <?php
         }

@@ -28,6 +28,7 @@ $address_attribute = $params->get('address');
 $postcode_attribute = $params->get('postcode');
 $telephone_attribute = $params->get('telephone');
 $email_attribute = $params->get('email');
+$email_visible_outside = $params->get('email_visible');
 
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
 require JModuleHelper::getLayoutPath('mod_contactInfo', $params->get('layout', 'default'));
