@@ -47,14 +47,15 @@ defined('_JEXEC') or die;
             <?php
         }
         if ($email_attribute == "1") {
-            echo JHtml::_('email.cloak', $dataContact->email_to, 1, JText::_('Email'), 0);
-            ?><br>
-            <?php
-        }
-        if ($email_visible_outside == "1") {
-            echo JHtml::_('email.cloak', $dataContact->email_to);
-            ?><br>
-            <?php
+            if ($email_visible_outside == "1") {
+                echo JHtml::_('email.cloak', $dataContact->email_to);
+                ?><br>
+                <?php
+            } else {
+                echo JHtml::_('email.cloak', $dataContact->email_to, 1, JText::_('Email'), 0);
+                ?><br>
+                <?php
+            }
         }
     }
     ?>        
