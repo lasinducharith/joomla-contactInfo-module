@@ -9,6 +9,6 @@ Position - Possition of the Contact.<br>
 Address - Address of the contact including suburb, state & country.<br>
 Postcode - Postcode of the contact.<br>
 Telephone - Contact number of the Contact.<br>
-Email - Cloaked Email address of the user. (Mailto)
+Email - Cloaked Email address of the user. (Mailto)<br>
 Email Address Visible - User can select whether he/she wants to set their email address visible to outside or not.
 
