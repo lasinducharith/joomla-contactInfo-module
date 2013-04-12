@@ -41,7 +41,7 @@ defined('_JEXEC') or die;
             <br>
         <?php endif ?>
 
-        <?php if ($postcode_attribute == "1" !empty($dataContact->postcode)) : ?>
+        <?php if ($postcode_attribute == "1" && !empty($dataContact->postcode)) : ?>
             <?php echo $dataContact->postcode; ?>
             <br>
         <?php endif ?>
@@ -51,7 +51,7 @@ defined('_JEXEC') or die;
             <br>
         <?php endif ?> 
 
-        <?php if ($email_attribute == "1" !empty($dataContact->email_to)) : ?>
+        <?php if ($email_attribute == "1" && !empty($dataContact->email_to)) : ?>
             <?php if ($email_visible_outside == "1") : ?>
                 <?php echo JHtml::_('email.cloak', $dataContact->email_to); ?>
                 <br>
