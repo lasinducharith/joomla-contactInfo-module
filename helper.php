@@ -15,7 +15,11 @@ class modContactsInfoHelper {
     static function getData($id, $component, $table, $field = 'id', $selector = '*') {
         if (1 == JComponentHelper::isEnabled($component)) {
             $db = JFactory::getDbo();
-            $db->setQuery('SELECT ' . $selector . ' FROM `' . $table . '` WHERE `' . $field . '`= \'' . $id . '\'');
+			$query = $db->getQuery(true);
+			$query->select($selector);
+			$query->from($table);
+			$query->where($field . '= \'' . $id . '\'' );
+            $db->setQuery($query);
             $db->query();
             return $db->loadObject();
         }
